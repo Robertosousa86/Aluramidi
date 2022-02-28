@@ -2,4 +2,6 @@ const playPom = () => {
   document.querySelector('#som_tecla_pom').play();
 };
 
-document.querySelector('.tecla_pom').onclick = playPom;
+const listKey = document.querySelectorAll('.tecla');
+
+listKey[0].onclick = playPom;

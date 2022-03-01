@@ -4,4 +4,10 @@ const playPom = () => {
 
 const listKey = document.querySelectorAll('.tecla');
 
-listKey[0].onclick = playPom;
+let counter = 0;
+
+while (counter < listKey.length) {
+  listKey[counter].onclick = playPom;
+
+  counter = counter + 1;
+}

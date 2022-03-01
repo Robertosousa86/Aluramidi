@@ -1,6 +1,4 @@
-const playPom = () => {
-  document.querySelector('#som_tecla_pom').play();
-};
+const playSong = (idAudioSong) => document.querySelector(idAudioSong).play();
 
 const listKey = document.querySelectorAll('.tecla');
 

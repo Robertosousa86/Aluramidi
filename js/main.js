@@ -6,7 +6,12 @@ const listKey = document.querySelectorAll('.tecla');
 let counter = 0;
 
 while (counter < listKey.length) {
-  listKey[counter].onclick = () => playSong('#som_tecla_pom');
+  const key = listKey[counter];
+  const instrument = key.classList[1];
+
+  const idAudio = `#som_${instrument}`;
+
+  key.onclick = () => playSong(idAudio);
 
   ++counter;
 }

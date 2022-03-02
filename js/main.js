@@ -10,4 +10,7 @@ for (counter = 0; counter < listKey.length; counter++) {
   const idAudio = `#som_${instrument}`;
 
   key.onclick = () => playSong(idAudio);
+
+  key.onkeydown = () => key.classList.add('ativa');
+  key.onkeyup = () => key.classList.remove('ativa');
 }

@@ -1,5 +1,10 @@
-const playSong = (idAudioElement) =>
-  document.querySelector(idAudioElement).play();
+const playSong = (audioSelector) => {
+  const element = document.querySelector(audioSelector);
+
+  if (element && element.localName === 'audio') return element.play();
+
+  return console.log(`Elemento ou seletor ${element.localName} não encontrado.`);
+};
 
 const listKey = document.querySelectorAll('.tecla');
 

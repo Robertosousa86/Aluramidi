@@ -11,6 +11,10 @@ for (counter = 0; counter < listKey.length; counter++) {
 
   key.onclick = () => playSong(idAudio);
 
-  key.onkeydown = () => key.classList.add('ativa');
+  key.onkeydown = (event) => {
+    if (event.code === 'Space' || event.code === 'Enter')
+      return key.classList.add('ativa');
+  };
+
   key.onkeyup = () => key.classList.remove('ativa');
 }
